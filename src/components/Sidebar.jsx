@@ -14,7 +14,7 @@ export default function Sidebar() {
       if (error) {
         console.error('Error fetching tables via RPC:', error);
         // Fallback to known tables if RPC is not created yet
-        setTables(['profiles', 'journeys', 'parcels', 'transactions']);
+        setTables(['profiles', 'journeys', 'parcels']);
       } else if (data) {
         setTables(data.map(t => t.table_name));
       }
